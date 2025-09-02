@@ -1,0 +1,7 @@
+{
+  "/Angular-IdP": {
+    "target": "https://localhost:9997",
+    "secure": false,
+    "ws": true
+  }
+}
