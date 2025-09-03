@@ -24,8 +24,8 @@ export class AppComponent implements OnInit {
   /** Login with popup */
   login() {
     this.msalService.loginPopup({
-      scopes: ['api://f873fe70-e679-41e2-905a-954c1c297b6e/access_as_user'] ,
-      authority: "https://login.microsoftonline.com/0ae51e19-07c8-4e4b-bb6d-648ee58410f4/",  
+      scopes: ['api://<client ID>/access_as_user'] ,
+      authority: "https://login.microsoftonline.com/<tenant id>/",  
 
     }).subscribe({
       next: (response) => {
@@ -45,7 +45,7 @@ export class AppComponent implements OnInit {
     }
 
     this.msalService.instance.acquireTokenSilent({
-      scopes: ['api://f873fe70-e679-41e2-905a-954c1c297b6e/access_as_user'], // ✅ must be same scope as login
+      scopes: ['api://<client id>/access_as_user'], //  must be same scope as login
       account: activeAccount,
     })
     .then((result) => {
