@@ -9,9 +9,9 @@ import { IPublicClientApplication, PublicClientApplication } from '@azure/msal-b
 export function MSALInstanceFactory(): IPublicClientApplication {
   return new PublicClientApplication({
     auth: {
-      clientId: '949734b8-68d3-4191-b2fa-de6b28448e65', 
+      clientId: '<Client ID>', 
       redirectUri: 'http://localhost:4200', 
-      authority: 'https://login.microsoftonline.com/0ae51e19-07c8-4e4b-bb6d-648ee58410f4',
+      authority: 'https://login.microsoftonline.com/<tenant id>',
     },
     cache: {
       cacheLocation: 'localStorage', // optional
